@@ -60,8 +60,6 @@
 /dev/quadd	0660	shell	shell
 /dev/quadd_auth	0660	system	system
 /dev/akm8963_dev 0660 	system 	system
-#/dev/snd/pcm*	0777	system	audio
-#/dev/snd/control*	0777	system	audio
 
 /sys/devices/platform/tegra14-i2c.4/i2c-4/4-0023/max77660-leds/leds/red-green   delay_on      0664  system   system
 /sys/devices/platform/tegra14-i2c.4/i2c-4/4-0023/max77660-leds/leds/red-green   delay_off      0664  system   system

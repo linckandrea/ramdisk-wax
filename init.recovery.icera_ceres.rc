@@ -13,7 +13,7 @@ on init
     setprop rild.libargs "-ewwan0 -ewwan1 -s0,2 -s0,1 -f20,36 -n"
 
 # fild properties
-    setprop gsm.modem.fild.args "--scheme 2 -f /dev/ttySHM0"
+    setprop gsm.modem.fild.args "--scheme 2 -f /dev/ttySHM0 --no-coredump"
 
 # agpsd properties
     setprop agpsd.dev_path "/dev/ttySHM3"

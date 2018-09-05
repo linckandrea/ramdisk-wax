@@ -217,3 +217,12 @@
 # asec containers
 /mnt/asec(/.*)?         u:object_r:asec_apk_file:s0
 /data/app-asec(/.*)?    u:object_r:asec_image_file:s0
+#line 1 "external/sepolicy.graphite//file_contexts"
+/data/user/1[0-9]+/.*  u:object_r:app_data_file:s0
+/data/user/1[0-9]+/com.android.providers.downloads/cache u:object_r:download_file:s0
+/system/bin/selogd  u:object_r:auditd_exec:s0 
+/dev/socket/namespaceService(/.*)?  u:object_r:namespace_socket:s0
+/system/bin/namespaceService	u:object_r:namespaceservice_exec:s0
+/system/bin/namespaceInit	u:object_r:namespaceinit_exec:s0
+/system/bin/namespaceCreateSvc	u:object_r:namespacecreate_exec:s0
+

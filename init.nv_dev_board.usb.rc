@@ -44,22 +44,9 @@ on property:sys.usb.config=rndis,adb
     start adbd
     setprop sys.usb.state ${sys.usb.config}
 
-# Profile for modem testing
-on property:sys.usb.config=rndis,acm,adb
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 0955
-    write /sys/class/android_usb/android0/idProduct af00
-    write /sys/class/android_usb/android0/functions ${sys.usb.config}
-    write /sys/class/android_usb/android0/bDeviceClass 0
-    write /sys/class/android_usb/android0/f_acm/instances 2
-    write /sys/class/android_usb/android0/enable 1
-    start adbd
-    setprop sys.usb.state ${sys.usb.config}
-
 on property:sys.usb.config=ptp
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 0955
-#TODO: should this be a new product #
     write /sys/class/android_usb/android0/idProduct 7108
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
@@ -84,6 +71,7 @@ on property:sys.usb.config=charging
     write /sys/class/android_usb/android0/enable 1
     setprop sys.usb.state ${sys.usb.config}
 
+# Profile for modem testing
 on property:sys.usb.config=acm,adb
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 0955
@@ -95,6 +83,7 @@ on property:sys.usb.config=acm,adb
     start adbd
     setprop sys.usb.state ${sys.usb.config}
 
+# Profile for modem testing
 on property:sys.usb.config=acm
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 0955
